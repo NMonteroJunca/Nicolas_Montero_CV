@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MainPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-color: #EFEFEF;
+}
+
+.Centered {
+    height: 350px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.HeaderContent {
+    width: 460px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;    
+}
+
+@font-face {
+    font-family: futura;
+    src: url(FuturaCyrillicMedium.ttf);
+}
+
+.Subtitle {
+    font-family: futura;
+    font-size: 15.4pt;
+    color: rgb(92, 92, 92);
+}
+
+h1 {
+    font-family: "League Spartan", sans-serif;
+    color: #00BF7A;
+    font-size: 93pt;
+}
+
+.Subtitles {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-left: 150px;
+}
+
+.Subtitles > p {
+    font-family: futura;
+    font-size: 12.5pt;
+    color: rgb(92, 92, 92);
+}
+
+.Image {
+    display: flex;
+    height: 250px;
+    width: 150px; 
+    margin-left: 40px;
+}
+
+/* seccion */
+
+.PersonalSection {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+@font-face {
+    font-family: futuraLight;
+    src: url(./FuturaCyrillicLight.ttf);
+}
+
+.Portrait {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+
+#PersonalTitle {
+    margin-bottom: 45px;
+    color: #00BF7A;
+    font-family: futuraLight; 
+    font-size: 25pt;
+}
+
+.PersonalContent {
+    width: 600px;
+    text-align: center;
+    font-family: futura;
+    color: rgb(92, 92, 92);
+}
+
+/* seccion */
+
+.SkillContainer {
+    background-color: #EFEFEF;
+    height: 1150px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 40px;
+}
+
+.SkillTitleDiv {
+    grid-column: 1 / 3;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SkillsTitle {
+    color: #00BF7A;
+    font-family: futuraLight;
+    text-align: center;
+    font-size: 44pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.TextDiv {
+    width: 340px;
+    font-size: 11pt;
+    font-family: futuraLight;
+    font-weight: 800;
+    color: rgb(92, 92, 92);
+}
+
+.workLink {
+    position: relative; /* Necesario para el pseudoelemento absoluto */
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+     /* Ajuste para que el espacio sea más manejable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    overflow: hidden; /* Asegura que no haya desbordamientos del pseudoelemento */
+}
+
+.workLink > a {
+    position: relative; /* Asegura que el enlace se quede encima del pseudoelemento */
+    padding: 5px 131px; /* Ajuste de padding */
+    border-radius: 20px;
+    color: rgb(73, 73, 73);
+    font-family: futuraLight;
+    font-weight: 800;
+    font-size: 16pt;
+    text-decoration: none;
+    z-index: 1; /* Prioriza el enlace sobre el pseudoelemento */
+    transition: color 0.5s;
+}
+
+.workLink::before {
+    background-color: #00BF7A;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: 0; /* Se asegura de estar detrás del contenido */
+}
+
+.workLink:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    
+}
+
+.workLink > a:hover {
+    color: white; /* Cambia el color al hacer hover */
+}
+
+  
+  
+
+
+
+
+h3 {
+    font-size: 15pt;
+    margin-bottom: 10px;
+}
+
+/* seccion */
+
+.ContactSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+    font-family: futuraLight;
+}
+
+.ContactTitle {
+    font-size: 44pt;
+    margin-bottom: 100px;
+    color: #00BF7A;
+}
+
+.ContactPhrase {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 450px;
+}
+
+.ContactButton {
+    margin-top: 40px;
+    background-color: #00BF7A;
+    color: white;
+    height: 40px;
+    width: 200px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: futura;
+}
+
+/* seccion */
+
+
+.footerDiv {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.FooterList {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.FooterMenu {
+    color: white;
+    list-style: none;
+    text-align: center;
+}
+
+.FooterMenu > a {
+    text-decoration: none;
+    font-family: futura;
+    color: rgb(92, 92, 92);
+}
+
+
+.copyright {
+    background-color: #EFEFEF;
+    color: rgb(0, 0, 0);
+    height: 100px;
+    text-align: center;
+    font-family: futuraLight;
+    padding-top: 15px;
+    font-size: 10pt;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .MainPage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        background-color: #EFEFEF;
+    }
+
+    .Centered {
+        height: 350px;
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .HeaderContent {
+        width: 250px;
+        height: 130px;
+        display: flex;
+        flex-direction: column; 
+        margin-left: 30px;
+    }
+
+    @font-face {
+        font-family: futura;
+        src: url(FuturaCyrillicMedium.ttf);
+    }
+
+    .Subtitle {
+        font-family: futura;
+        font-size: 9pt;
+        color: rgb(92, 92, 92);
+    }
+
+    h1 {
+        font-family: "League Spartan", sans-serif;
+        color: #00BF7A;
+        font-size: 47pt;
+    }
+
+    .Subtitles {
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        margin-left: 30px;
+    }
+
+    .Subtitles > p {
+        font-family: futura;
+        font-size: 10pt;
+        color: rgb(92, 92, 92);
+    }
+
+    .Image {
+        display: flex;
+        height: 100px;
+        width: 100px; 
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+
+    .MainPage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        background-color: #EFEFEF;
+    }
+
+    .Centered {
+        height: 350px;
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .HeaderContent {
+        width: 250px;
+        height: 130px;
+        display: flex;
+        flex-direction: column; 
+        margin-left: 30px;
+    }
+
+    @font-face {
+        font-family: futura;
+        src: url(FuturaCyrillicMedium.ttf);
+    }
+
+    .Subtitle {
+        font-family: futura;
+        font-size: 9pt;
+        color: rgb(92, 92, 92);
+    }
+
+    h1 {
+        font-family: "League Spartan", sans-serif;
+        color: #00BF7A;
+        font-size: 47pt;
+    }
+
+    .Subtitles {
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        margin-left: 30px;
+    }
+
+    .Subtitles > p {
+        font-family: futura;
+        font-size: 10pt;
+        color: rgb(92, 92, 92);
+    }
+
+    .Image {
+        display: flex;
+        height: 100px;
+        width: 100px; 
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+
+    /* Section */
+
+    .PersonalSection {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;   
+    }
+
+    .Portrait {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 35px;
+    }
+
+    #PersonalTitle {
+        margin-bottom: 45px;
+        color: #00BF7A;
+        font-family: futuraLight; 
+        font-size: 19pt;
+    }
+
+    .PersonalContent {
+        width: 340px;
+        text-align: center;
+        font-family: futura;
+        color: rgb(92, 92, 92);
+    }
+
+    /* Section */
+
+    .SkillContainer {
+        height: 100%;
+        padding-bottom: 100px;
+        background-color: #EFEFEF;    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .SkillTitleDiv {
+        height: 200px;
+        grid-column: 1 / 2;
+    }
+
+    .SkillsTitle {
+        font-size: 34pt;
+    }
+
+    .SkillContainer > div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .TextDiv {
+        margin-bottom: 80px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Section */
+
+    .ContactSection {  
+        height: 600px;
+    }
+
+    .ContactPhrase {
+        text-align: center;
+        width: 400px;
+    }
+}
+
+
